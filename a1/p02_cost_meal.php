@@ -11,7 +11,7 @@ $tip = $food * $c_tip;
 $tax = $food * $c_tax;
 
 $summa = $food + $tip + $tax;
-//printf 'Summa: ' . $summa;
+//print 'Summa: ' . $summa;
 
 printf("%d %-9s %.2f cost: %5.2f\n", 2, 'Gamburger',
 $gamburger, 2 * $gamburger);
