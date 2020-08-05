@@ -7,3 +7,32 @@
 изображения размещаются по новому пути или на другом сервере. Для этого достаточно изме-
 нить содержимое глобальной переменной, например, с /images/ на http://images.example
 .com/.*/
+
+
+<?php
+function f($name_file, $alt = null, $height = null, $wigth = null)
+{
+    if (isset($GLOBALS['image_path']))
+	{
+        $name_file = $GLOBALS['image_path'] . $name_file;
+    }
+
+    html = '<img src = "' . $name_file . '"';
+	if(isset($alt))
+	{
+		$html .= ' alt="' . $alt . '"';
+	}
+	if(isset($height))
+	{
+		$html .= ' height="' . $height . '"';
+	}
+	if(isset($width))
+	{
+		$html .= ' width="' . $width . '"';
+	}	
+}
+$html .= '/>';
+return $html;
+}
+
+?>
